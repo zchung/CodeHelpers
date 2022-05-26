@@ -1,0 +1,1 @@
+Place the zip file in Documents/Visual Studio xxxx/Templates/Item Templates
