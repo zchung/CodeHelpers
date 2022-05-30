@@ -1,0 +1,73 @@
+{
+	"info": {
+		"_postman_id": "bd967e4c-8b8d-4e6d-9eba-defc7742b0ed",
+		"name": "EventsApis",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "2319941"
+	},
+	"item": [
+		{
+			"name": "Get Random Events Cloud",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"count\": 4,\r\n    \"level\": 1,\r\n    \"gameModel\": {\r\n        \"shipModel\": {\r\n            \"shields\": {\r\n                \"currentHitpoints\": 30,\r\n                \"maximumHitpoints\": 50\r\n            },\r\n            \"powerContainer\": {\r\n                \"currentCapacity\": 10,\r\n                \"maximumCapacity\": 20\r\n            },\r\n            \"cargoContainer\" :{\r\n                \"currentCapacity\": 15,\r\n                \"maximumCapacity\": 30\r\n            }\r\n        },\r\n        \"locationModel\": {\r\n            \"locationSize\": 30,\r\n            \"currentPosition\": 4,\r\n            \"mining\": {\r\n                \"currentCapacity\": 20,\r\n                \"maximumCapacity\": 33\r\n            },\r\n            \"hostility\": {\r\n                \"currentHitpoints\": 15,\r\n                \"maximumHitpoints\": 25\r\n            }\r\n        }\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://spaceadventureevents.herokuapp.com/api/events/random/execute",
+					"protocol": "https",
+					"host": [
+						"spaceadventureevents",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"events",
+						"random",
+						"execute"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Random Events",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"count\": 4,\r\n    \"level\": 1,\r\n    \"gameModel\": {\r\n        \"shipModel\": {\r\n            \"shields\": {\r\n                \"currentHitpoints\": 30,\r\n                \"maximumHitpoints\": 50\r\n            },\r\n            \"powerContainer\": {\r\n                \"currentCapacity\": 10,\r\n                \"maximumCapacity\": 20\r\n            },\r\n            \"cargoContainer\" :{\r\n                \"currentCapacity\": 15,\r\n                \"maximumCapacity\": 30\r\n            }\r\n        },\r\n        \"locationModel\": {\r\n            \"locationSize\": 30,\r\n            \"currentPosition\": 4,\r\n            \"mining\": {\r\n                \"currentCapacity\": 20,\r\n                \"maximumCapacity\": 33\r\n            },\r\n            \"hostility\": {\r\n                \"currentHitpoints\": 15,\r\n                \"maximumHitpoints\": 25\r\n            }\r\n        }\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7192/api/events/random/execute",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7192",
+					"path": [
+						"api",
+						"events",
+						"random",
+						"execute"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

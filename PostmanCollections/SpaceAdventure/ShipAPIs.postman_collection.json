@@ -1,0 +1,140 @@
+{
+	"info": {
+		"_postman_id": "1fa60ca8-4598-41fb-aad8-7aeffedc8883",
+		"name": "ShipAPIs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "2319941"
+	},
+	"item": [
+		{
+			"name": "ExecuteShipTurn",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"DamageDone\": 30,\n\t\"ShipHitpoints\": 100,\n    \"EquipmentList\": [\n        {\n\t\t    \"PowerLevel\": 1,\n\t\t    \"MinPowerUsage\": 2\n\t    }, {\n\t\t    \"PowerLevel\": 1,\n\t\t    \"MinPowerUsage\": 2\n\t    }, {\n            \"PowerLevel\": 3,\n            \"MinPowerUsage\": 2\n        }\n    ],\n\t\"Shields\": {\n\t\t\"PowerLevel\": 2,\n        \"CurrentHitpoints\": 50,\n        \"Hitpoints\": 100,\n        \"RegenAmount\": 2,\n        \"MinPowerUsage\": 4\n\t},\n\t\"CargoContainer\": {\n\t\t\"CurrentCapacity\": 50,\n\t\t\"MaximumCapacity\":100\n\t},\n\t\"PowerContainer\": {\n\t\t\"CurrentCapacity\": 50,\n\t\t\"MaximumCapacity\":100\n\t}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:51536/api/shipturn/executeshipturn",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "51536",
+					"path": [
+						"api",
+						"shipturn",
+						"executeshipturn"
+					]
+				},
+				"description": "ExecuteShipTurn"
+			},
+			"response": []
+		},
+		{
+			"name": "New Random ships",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"DamageDone\": 30,\n\t\"ShipHitpoints\": 100,\n\t\"Engines\": {\n\t\t\"PowerLevel\": 1,\n\t\t\"MinPowerUsage\": 2\n\t},\n\t\"Shields\": {\n\t\t\"PowerLevel\": 2,\n        \"CurrentHitpoints\": 50,\n        \"Hitpoints\": 100,\n        \"RegenAmount\": 2,\n        \"MinPowerUsage\": 4\n\t},\n\t\"Weapon\": {\n\t\t\"PowerLevel\": 1,\n\t\t\"MinPowerUsage\": 2\n\t},\n\t\"CargoContainer\": {\n\t\t\"CurrentCapacity\": 50,\n\t\t\"MaximumCapacity\":100\n\t},\n\t\"PowerContainer\": {\n\t\t\"CurrentCapacity\": 50,\n\t\t\"MaximumCapacity\":100\n\t}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:51536/api/shipturn/executeshipturn",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "51536",
+					"path": [
+						"api",
+						"shipturn",
+						"executeshipturn"
+					]
+				},
+				"description": "ExecuteShipTurn"
+			},
+			"response": []
+		},
+		{
+			"name": "New Random ships Cloud",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://spaceadventureshipapi.herokuapp.com/api/ship/random/new/4",
+					"protocol": "https",
+					"host": [
+						"spaceadventureshipapi",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"ship",
+						"random",
+						"new",
+						"4"
+					]
+				},
+				"description": "ExecuteShipTurn"
+			},
+			"response": []
+		},
+		{
+			"name": "ExecuteShipTurn Cloud",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"DamageDone\": 30,\n\t\"ShipHitpoints\": 100,\n\t\"Engines\": {\n\t\t\"PowerLevel\": 1,\n\t\t\"MinPowerUsage\": 2\n\t},\n\t\"Shields\": {\n\t\t\"PowerLevel\": 2,\n        \"CurrentHitpoints\": 50,\n        \"Hitpoints\": 100,\n        \"RegenAmount\": 2,\n        \"MinPowerUsage\": 4\n\t},\n\t\"Weapon\": {\n\t\t\"PowerLevel\": 1,\n\t\t\"MinPowerUsage\": 2\n\t},\n\t\"CargoContainer\": {\n\t\t\"CurrentCapacity\": 50,\n\t\t\"MaximumCapacity\":100\n\t},\n\t\"PowerContainer\": {\n\t\t\"CurrentCapacity\": 50,\n\t\t\"MaximumCapacity\":100\n\t}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://spaceadventureshipapi.herokuapp.com/api/shipturn/executeshipturn",
+					"protocol": "https",
+					"host": [
+						"spaceadventureshipapi",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"shipturn",
+						"executeshipturn"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

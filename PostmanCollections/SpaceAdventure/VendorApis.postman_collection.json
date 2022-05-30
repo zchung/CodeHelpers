@@ -1,0 +1,135 @@
+{
+	"info": {
+		"_postman_id": "4f9e8c19-f5ee-4e10-81ca-0a19240b1c98",
+		"name": "VendorApis",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "2319941"
+	},
+	"item": [
+		{
+			"name": "Trade",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"Level\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:60814/api/vendor/getrandomvendor",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "60814",
+					"path": [
+						"api",
+						"vendor",
+						"getrandomvendor"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetRandomVendor Cloud",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"Level\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://spaceadventurevendorapi.herokuapp.com/api/vendor/getrandomvendor",
+					"protocol": "https",
+					"host": [
+						"spaceadventurevendorapi",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"vendor",
+						"getrandomvendor"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Trade",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"ResourcesTradeRate\": 3,\n\t\"PowerRechargeRate\": 5,\n\t\"ResourcesToTrade\": 20,\n\t\"PowerToTrade\": 15\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:60814/api/vendor/trade",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "60814",
+					"path": [
+						"api",
+						"vendor",
+						"trade"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Trade Cloud",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"ResourcesTradeRate\": 3,\n\t\"PowerRechargeRate\": 5,\n\t\"ResourcesToTrade\": 20,\n\t\"PowerToTrade\": 15\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://spaceadventurelinux.australiaeast.cloudapp.azure.com:6003/api/vendor/trade",
+					"protocol": "http",
+					"host": [
+						"spaceadventurelinux",
+						"australiaeast",
+						"cloudapp",
+						"azure",
+						"com"
+					],
+					"port": "6003",
+					"path": [
+						"api",
+						"vendor",
+						"trade"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

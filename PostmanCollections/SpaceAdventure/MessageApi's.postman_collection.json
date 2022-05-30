@@ -1,0 +1,74 @@
+{
+	"info": {
+		"_postman_id": "44cdd279-34b5-4bd3-8d28-6f56b9012b83",
+		"name": "MessageApi's",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "2319941"
+	},
+	"item": [
+		{
+			"name": "GetMessages",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"TravelDistance\": 5\n\t\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:64523/api/message/GetMessages",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "64523",
+					"path": [
+						"api",
+						"message",
+						"GetMessages"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetMessages Cloud",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"TravelDistance\": 5,\n\t\"PowerLoss\": 30,\n\t\"NoMorePower\": true\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://spaceadventurelinux.australiaeast.cloudapp.azure.com:6005/api/message/GetMessages",
+					"protocol": "http",
+					"host": [
+						"spaceadventurelinux",
+						"australiaeast",
+						"cloudapp",
+						"azure",
+						"com"
+					],
+					"port": "6005",
+					"path": [
+						"api",
+						"message",
+						"GetMessages"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,258 @@
+{
+	"info": {
+		"_postman_id": "60af6e26-a516-4aa2-8bed-c4ab8c108455",
+		"name": "LocationAPI's",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "2319941"
+	},
+	"item": [
+		{
+			"name": "ExecuteLocationTurn Combat",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"turnAction\": 2,\n  \"location\": {\n    \"level\": 0,\n    \"isMineable\": true,\n    \"canTrade\": true,\n    \"locationSize\": 0,\n    \"currentPosition\": 0,\n    \"locationStatus\": 0,\n    \"name\": \"string\",\n    \"mining\": {\n      \"currentCapacity\": 0,\n      \"maximumCapacity\": 0\n    },\n    \"hostility\": {\n      \"damage\": 0,\n      \"currentHitpoints\": 10,\n      \"maximumHitpoints\": 10\n    }\n  },\n  \"engines\": {\n    \"powerLevel\": 0,\n    \"minPowerUsage\": 0,\n    \"enginesId\": 0,\n    \"baseSpeed\": 0\n  },\n  \"weapon\": {\n    \"powerLevel\": 3,\n    \"minPowerUsage\": 0,\n    \"baseWeaponDamage\": 3\n  },\n  \"miningLaser\": {\n    \"powerLevel\": 0,\n    \"minPowerUsage\": 0,\n    \"baseEffectiveness\": 0,\n    \"toolType\": 0\n  },\n  \"vendorModel\": {\n    \"resourcesTradeRate\": 0,\n    \"powerRechargeRate\": 0,\n    \"resourcesToTrade\": 0,\n    \"powerToTrade\": 0\n  },\n  \"shipCargo\": 0\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:64182/api/locationturn/executelocationturn",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "64182",
+					"path": [
+						"api",
+						"locationturn",
+						"executelocationturn"
+					]
+				},
+				"description": "executelocationturn"
+			},
+			"response": []
+		},
+		{
+			"name": "ExecuteLocationTurn Travel",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"turnAction\": 0,\n  \"location\": {\n    \"level\": 1,\n    \"isMineable\": false,\n    \"canTrade\": false,\n    \"locationSize\": 20,\n    \"currentPosition\": 19,\n    \"locationStatus\": 0,\n    \"name\": \"test location\",\n    \"mining\": {\n      \"currentCapacity\": 0,\n      \"maximumCapacity\": 0\n    },\n    \"hostility\": {\n      \"damage\": 0,\n      \"currentHitpoints\": 0,\n      \"maximumHitpoints\": 0\n    }\n  },\n  \"engines\": {\n    \"powerLevel\": 2,\n    \"minPowerUsage\": 1,\n    \"enginesId\": 0,\n    \"baseSpeed\": 2\n  },\n  \"weapon\": {\n    \"powerLevel\": 3,\n    \"minPowerUsage\": 0,\n    \"baseWeaponDamage\": 3\n  },\n  \"miningLaser\": {\n    \"powerLevel\": 2,\n    \"minPowerUsage\": 1,\n    \"baseEffectiveness\": 3,\n    \"toolType\": 0\n  },\n  \"vendorModel\": {\n    \"resourcesTradeRate\": 0,\n    \"powerRechargeRate\": 0,\n    \"resourcesToTrade\": 0,\n    \"powerToTrade\": 0\n  },\n  \"shipCargo\": 0\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:64182/api/locationturn/executelocationturn",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "64182",
+					"path": [
+						"api",
+						"locationturn",
+						"executelocationturn"
+					]
+				},
+				"description": "executelocationturn"
+			},
+			"response": []
+		},
+		{
+			"name": "ExecuteLocationTurn Mine",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"turnAction\": 1,\n  \"location\": {\n    \"level\": 1,\n    \"isMineable\": false,\n    \"canTrade\": false,\n    \"locationSize\": 20,\n    \"currentPosition\": 1,\n    \"locationStatus\": 0,\n    \"name\": \"string\",\n    \"mining\": {\n      \"currentCapacity\": 25,\n      \"maximumCapacity\": 25\n    },\n    \"hostility\": {\n      \"damage\": 0,\n      \"currentHitpoints\": 0,\n      \"maximumHitpoints\": 0\n    }\n  },\n  \"engines\": {\n    \"powerLevel\": 2,\n    \"minPowerUsage\": 1,\n    \"enginesId\": 0,\n    \"baseSpeed\": 2\n  },\n  \"weapon\": {\n    \"powerLevel\": 3,\n    \"minPowerUsage\": 0,\n    \"baseWeaponDamage\": 3\n  },\n  \"miningLaser\": {\n    \"powerLevel\": 2,\n    \"minPowerUsage\": 1,\n    \"baseEffectiveness\": 3,\n    \"toolType\": 0\n  },\n  \"vendorModel\": {\n    \"resourcesTradeRate\": 0,\n    \"powerRechargeRate\": 0,\n    \"resourcesToTrade\": 0,\n    \"powerToTrade\": 0\n  },\n  \"shipCargo\": 0\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:64182/api/locationturn/executelocationturn",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "64182",
+					"path": [
+						"api",
+						"locationturn",
+						"executelocationturn"
+					]
+				},
+				"description": "executelocationturn"
+			},
+			"response": []
+		},
+		{
+			"name": "ExecuteLocationTurn Mine Cloud",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"turnAction\": 1,\n  \"location\": {\n    \"level\": 1,\n    \"isMineable\": false,\n    \"canTrade\": false,\n    \"locationSize\": 20,\n    \"currentPosition\": 1,\n    \"locationStatus\": 0,\n    \"name\": \"string\",\n    \"mining\": {\n      \"currentCapacity\": 25,\n      \"maximumCapacity\": 25\n    },\n    \"hostility\": {\n      \"damage\": 0,\n      \"currentHitpoints\": 0,\n      \"maximumHitpoints\": 0\n    }\n  },\n  \"engines\": {\n    \"powerLevel\": 2,\n    \"minPowerUsage\": 1,\n    \"enginesId\": 0,\n    \"baseSpeed\": 2\n  },\n  \"weapon\": {\n    \"powerLevel\": 3,\n    \"minPowerUsage\": 0,\n    \"baseWeaponDamage\": 3\n  },\n  \"miningLaser\": {\n    \"powerLevel\": 2,\n    \"minPowerUsage\": 1,\n    \"baseEffectiveness\": 3,\n    \"toolType\": 0\n  },\n  \"vendorModel\": {\n    \"resourcesTradeRate\": 0,\n    \"powerRechargeRate\": 0,\n    \"resourcesToTrade\": 0,\n    \"powerToTrade\": 0\n  },\n  \"shipCargo\": 0\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://spaceadventurelocationapi.herokuapp.com/api/locationturn/executelocationturn",
+					"protocol": "https",
+					"host": [
+						"spaceadventurelocationapi",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"locationturn",
+						"executelocationturn"
+					]
+				},
+				"description": "executelocationturn"
+			},
+			"response": []
+		},
+		{
+			"name": "GetNewRandomLocation",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"PreviousLocationStatus\": 0\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:64182/api/location/GetNewRandomLocation",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "64182",
+					"path": [
+						"api",
+						"location",
+						"GetNewRandomLocation"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ExecuteLocationTurn Combat Cloud",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"turnAction\": 2,\n  \"location\": {\n    \"level\": 0,\n    \"isMineable\": true,\n    \"canTrade\": true,\n    \"locationSize\": 0,\n    \"currentPosition\": 0,\n    \"locationStatus\": 0,\n    \"name\": \"string\",\n    \"mining\": {\n      \"currentCapacity\": 0,\n      \"maximumCapacity\": 0\n    },\n    \"hostility\": {\n      \"damage\": 0,\n      \"currentHitpoints\": 10,\n      \"maximumHitpoints\": 10\n    }\n  },\n  \"engines\": {\n    \"powerLevel\": 0,\n    \"minPowerUsage\": 0,\n    \"enginesId\": 0,\n    \"baseSpeed\": 0\n  },\n  \"weapon\": {\n    \"powerLevel\": 3,\n    \"minPowerUsage\": 0,\n    \"baseWeaponDamage\": 3\n  },\n  \"miningLaser\": {\n    \"powerLevel\": 0,\n    \"minPowerUsage\": 0,\n    \"baseEffectiveness\": 0,\n    \"toolType\": 0\n  },\n  \"vendorModel\": {\n    \"resourcesTradeRate\": 0,\n    \"powerRechargeRate\": 0,\n    \"resourcesToTrade\": 0,\n    \"powerToTrade\": 0\n  },\n  \"shipCargo\": 0\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://spaceadventurelocationapi.herokuapp.com/api/locationturn/executelocationturn",
+					"protocol": "https",
+					"host": [
+						"spaceadventurelocationapi",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"locationturn",
+						"executelocationturn"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ExecuteLocationTurn Travel Cloud",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"turnAction\": 0,\n  \"location\": {\n    \"level\": 1,\n    \"isMineable\": false,\n    \"canTrade\": false,\n    \"locationSize\": 20,\n    \"currentPosition\": 19,\n    \"locationStatus\": 0,\n    \"name\": \"test location\",\n    \"mining\": {\n      \"currentCapacity\": 0,\n      \"maximumCapacity\": 0\n    },\n    \"hostility\": {\n      \"damage\": 0,\n      \"currentHitpoints\": 0,\n      \"maximumHitpoints\": 0\n    }\n  },\n  \"engines\": {\n    \"powerLevel\": 2,\n    \"minPowerUsage\": 1,\n    \"enginesId\": 0,\n    \"baseSpeed\": 2\n  },\n  \"weapon\": {\n    \"powerLevel\": 3,\n    \"minPowerUsage\": 0,\n    \"baseWeaponDamage\": 3\n  },\n  \"miningLaser\": {\n    \"powerLevel\": 2,\n    \"minPowerUsage\": 1,\n    \"baseEffectiveness\": 3,\n    \"toolType\": 0\n  },\n  \"vendorModel\": {\n    \"resourcesTradeRate\": 0,\n    \"powerRechargeRate\": 0,\n    \"resourcesToTrade\": 0,\n    \"powerToTrade\": 0\n  },\n  \"shipCargo\": 0\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://spaceadventurelocationapi.herokuapp.com/api/locationturn/executelocationturn",
+					"protocol": "https",
+					"host": [
+						"spaceadventurelocationapi",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"locationturn",
+						"executelocationturn"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetNewRandomLocation Cloud",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"PreviousLocationStatus\": 0\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://spaceadventurelocationapi.herokuapp.com/api/location/GetNewRandomLocation",
+					"protocol": "https",
+					"host": [
+						"spaceadventurelocationapi",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"location",
+						"GetNewRandomLocation"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

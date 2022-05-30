@@ -1,0 +1,580 @@
+{
+	"info": {
+		"_postman_id": "1ce4bc16-8870-4713-acbe-f87e7c065ad3",
+		"name": "GameAPIs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "2319941"
+	},
+	"item": [
+		{
+			"name": "GetNewGame",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "2022-04-30",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"ShipModel\": {}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/game/execute/new",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"game",
+						"execute",
+						"new"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetNewRandomShip",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "2022-04-18",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/game/ship/new/random/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"game",
+						"ship",
+						"new",
+						"random",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetNewRandomShip Cloud",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "2022-05-01",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://spaceadventuregameapi.herokuapp.com/api/game/ship/new/random/3",
+					"protocol": "https",
+					"host": [
+						"spaceadventuregameapi",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"game",
+						"ship",
+						"new",
+						"random",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetNewRandomLocation",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "2020/06/19",
+						"type": "text"
+					},
+					{
+						"key": "",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"PreviousLocationStatus\": 0\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/game/GetNewRandomLocation",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"game",
+						"GetNewRandomLocation"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Travel Turn",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "2022-05-06",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"TurnAction\": 0,\n\t\"GameModel\": {\n\t\t\"ShipModel\": {\n            \"Name\": \"New Ship\",\n\t\t\t\"CurrentHitpoints\": 30,\n\t\t\t\"MaximumHitpoints\": 100,\n\t\t\t\"Engines\": {\n\t\t\t\t\"PowerLevel\": 2,\n\t\t\t\t\"MinPowerUsage\": 2,\n\t\t\t\t\"BaseSpeed\": 1\n\t\t\t},\n\t\t\t\"Shields\": {\n\t\t\t\t\"PowerLevel\": 1,\n\t\t        \"CurrentHitpoints\": 50,\n\t\t        \"MaximumHitpoints\": 50,\n\t\t        \"Hitpoints\": 100,\n\t\t        \"RegenAmount\": 2,\n\t\t        \"MinPowerUsage\": 4\n\t\t\t},\n\t\t\t\"Weapon\": {\n\t\t\t\t\"PowerLevel\": 1,\n\t\t\t\t\"MinPowerUsage\": 2\n\t\t\t},\n            \"MiningLaser\": {\n                \"PowerLevel\": 0,\n                \"BaseEffectiveness\": 1\n            },\n\t\t\t\"CargoContainer\": {\n\t\t\t\t\"CurrentCapacity\": 50,\n\t\t\t\t\"MaximumCapacity\":100\n\t\t\t},\n\t\t\t\"PowerContainer\": {\n\t\t\t\t\"CurrentCapacity\": 50,\n\t\t\t\t\"MaximumCapacity\":100\n\t\t\t}\n},\n\t\t\"LocationModel\": {\n            \"Name\": \"Starbase\",\n\t\t\t\"CurrentPosition\": 9,\n\t\t\t\"LocationSize\": 10,\n            \"Mining\": {\n                \"CurrentCapacity\": 50,\n\t\t\t\t\"MaximumCapacity\":100\n            },\n            \"VendorModel\": {}\n\t\t},\n        \"Version\": \"1.0.0.0\"\n\t}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/game/ExecuteGameTurn",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"game",
+						"ExecuteGameTurn"
+					]
+				},
+				"description": "For Travel"
+			},
+			"response": []
+		},
+		{
+			"name": "Mining",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "2022-04-16",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"TurnAction\": 1,\n\t\"GameModel\": {\n\t\t\"ShipModel\": {\n            \"Name\": \"NewShip\",\n\t\t\t\"DamageDone\": 30,\n\t\t\t\"ShipHitpoints\": 100,\n\t\t\t\"Engines\": {\n\t\t\t\t\"PowerLevel\": 1,\n\t\t\t\t\"MinPowerUsage\": 2,\n\t\t\t\t\"BaseSpeed\": 2\n\t\t\t},\n\t\t\t\"Shields\": {\n\t\t\t\t\"PowerLevel\": 2,\n\t\t        \"CurrentHitpoints\": 50,\n\t\t        \"MaximumHitpoints\": 50,\n\t\t        \"Hitpoints\": 100,\n\t\t        \"RegenAmount\": 2,\n\t\t        \"MinPowerUsage\": 4\n\t\t\t},\n\t\t\t\"Weapon\": {\n\t\t\t\t\"PowerLevel\": 1,\n\t\t\t\t\"MinPowerUsage\": 2,\n\t\t\t\t\"BaseWeaponDamage\": 1\n\t\t\t},\n\t\t\t\"CargoContainer\": {\n\t\t\t\t\"CurrentCapacity\": 50,\n\t\t\t\t\"MaximumCapacity\":100\n\t\t\t},\n\t\t\t\"PowerContainer\": {\n\t\t\t\t\"CurrentCapacity\": 10,\n\t\t\t\t\"MaximumCapacity\":100\n\t\t\t}\n\t\t},\n\t\t\"LocationModel\": {\n\t\t\t\"Level\": 1,\n            \"Name\": \"Test Location\",\n            \"IsMineable\": false,\n            \"CanTrade\": false,\n\t\t\t\"LocationSize\": 10,\n\t\t\t\"CurrentPosition\": 9,\n\t\t\t\"AvailableResources\": 10,\n            \"HostileHitpoints\": 0,\n            \"HostileDamage\": 0,\n            \"LocationStatus\": 0,\n            \"VendorModel\": {}\n\t\t},\n        \"Version\": \"1.0.0.0\"\n\t}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/game/ExecuteGameTurn",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"game",
+						"ExecuteGameTurn"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Combat",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "2022-04-16",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"TurnAction\": 2,\n\t\"GameModel\": {\n\t\t\"ShipModel\": {\n            \"Name\": \"New Ship Name\",\n\t\t\t\"CurrentHitpoints\": 50,\n\t\t\t\"MaximumHitpoints\": 100,\n\t\t\t\"Engines\": {\n\t\t\t\t\"PowerLevel\": 1,\n\t\t\t\t\"MinPowerUsage\": 2,\n\t\t\t\t\"BaseSpeed\": 2\n\t\t\t},\n\t\t\t\"Shields\": {\n\t\t\t\t\"PowerLevel\": 1,\n\t\t        \"CurrentHitpoints\": 50,\n\t\t        \"MaximumHitpoints\": 100,\n\t\t        \"RegenAmount\": 2,\n\t\t        \"MinPowerUsage\": 4\n\t\t\t},\n\t\t\t\"Weapon\": {\n\t\t\t\t\"PowerLevel\": 2,\n\t\t\t\t\"MinPowerUsage\": 2,\n\t\t\t\t\"BaseWeaponDamage\": 2\n\t\t\t},\n\t\t\t\"CargoContainer\": {\n\t\t\t\t\"CurrentCapacity\": 50,\n\t\t\t\t\"MaximumCapacity\":100\n\t\t\t},\n\t\t\t\"PowerContainer\": {\n\t\t\t\t\"CurrentCapacity\": 5,\n\t\t\t\t\"MaximumCapacity\":100\n\t\t\t}\n\t\t},\n\t\t\"LocationModel\": {\n\t\t\t\"Level\": 1,\n            \"Name\": \"Test Location\",\n            \"IsMineable\": false,\n            \"CanTrade\": false,\n\t\t\t\"LocationSize\": 10,\n\t\t\t\"CurrentPosition\": 9,\n\t\t\t\"AvailableResources\": 10,\n            \"HostileHitpoints\": 20,\n            \"HostileDamage\": 3,\n            \"LocationStatus\": 1,\n            \"VendorModel\": null\n\t\t},\n        \"Version\": \"1.0.0.0\"\n\t}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/game/ExecuteGameTurn",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"game",
+						"ExecuteGameTurn"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Travel Turn Cloud",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "2022-05-06",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"TurnAction\": 0,\n\t\"GameModel\": {\n\t\t\"ShipModel\": {\n            \"Name\": \"New Ship\",\n\t\t\t\"CurrentHitpoints\": 30,\n\t\t\t\"MaximumHitpoints\": 100,\n\t\t\t\"Engines\": {\n\t\t\t\t\"PowerLevel\": 2,\n\t\t\t\t\"MinPowerUsage\": 2,\n\t\t\t\t\"BaseSpeed\": 1\n\t\t\t},\n\t\t\t\"Shields\": {\n\t\t\t\t\"PowerLevel\": 1,\n\t\t        \"CurrentHitpoints\": 50,\n\t\t        \"MaximumHitpoints\": 50,\n\t\t        \"Hitpoints\": 100,\n\t\t        \"RegenAmount\": 2,\n\t\t        \"MinPowerUsage\": 4\n\t\t\t},\n\t\t\t\"Weapon\": {\n\t\t\t\t\"PowerLevel\": 1,\n\t\t\t\t\"MinPowerUsage\": 2\n\t\t\t},\n            \"MiningLaser\": {\n                \"PowerLevel\": 0,\n                \"BaseEffectiveness\": 1\n            },\n\t\t\t\"CargoContainer\": {\n\t\t\t\t\"CurrentCapacity\": 50,\n\t\t\t\t\"MaximumCapacity\":100\n\t\t\t},\n\t\t\t\"PowerContainer\": {\n\t\t\t\t\"CurrentCapacity\": 50,\n\t\t\t\t\"MaximumCapacity\":100\n\t\t\t}\n},\n\t\t\"LocationModel\": {\n            \"Name\": \"Starbase\",\n\t\t\t\"CurrentPosition\": 9,\n\t\t\t\"LocationSize\": 10,\n            \"Mining\": {\n                \"CurrentCapacity\": 50,\n\t\t\t\t\"MaximumCapacity\":100\n            },\n            \"VendorModel\": {}\n\t\t},\n        \"Version\": \"1.0.0.0\"\n\t}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://spaceadventuregameapi.herokuapp.com/api/game/ExecuteGameTurn",
+					"protocol": "https",
+					"host": [
+						"spaceadventuregameapi",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"game",
+						"ExecuteGameTurn"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetNewGame Cloud",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "2021/02/06",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"ShipName\": \"test ship\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://spaceadventuregameapi.herokuapp.com/api/game/getnewgame",
+					"protocol": "https",
+					"host": [
+						"spaceadventuregameapi",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"game",
+						"getnewgame"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetNewGame Cloud Copy",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "2021/02/06",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"ShipName\": \"test ship\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://spaceadventuregameapi.herokuapp.com/api/game/getnewgame",
+					"protocol": "https",
+					"host": [
+						"spaceadventuregameapi",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"game",
+						"getnewgame"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetNewGame Cloud AWS",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "2021/02/06",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"ShipName\": \"test ship\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://spaceadventuregameapi.herokuapp.com/api/game/getnewgame",
+					"protocol": "https",
+					"host": [
+						"spaceadventuregameapi",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"game",
+						"getnewgame"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Combat Cloud",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "2020/06/22",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"TurnAction\": 2,\n\t\"GameModel\": {\n\t\t\"ShipModel\": {\n            \"Name\": \"New Ship Name\",\n\t\t\t\"CurrentHitpoints\": 50,\n\t\t\t\"MaximumHitpoints\": 100,\n\t\t\t\"Engines\": {\n\t\t\t\t\"PowerLevel\": 1,\n\t\t\t\t\"MinPowerUsage\": 2,\n\t\t\t\t\"BaseSpeed\": 2\n\t\t\t},\n\t\t\t\"Shields\": {\n\t\t\t\t\"PowerLevel\": 1,\n\t\t        \"CurrentHitpoints\": 50,\n\t\t        \"MaximumHitpoints\": 100,\n\t\t        \"RegenAmount\": 2,\n\t\t        \"MinPowerUsage\": 4\n\t\t\t},\n\t\t\t\"Weapon\": {\n\t\t\t\t\"PowerLevel\": 2,\n\t\t\t\t\"MinPowerUsage\": 2,\n\t\t\t\t\"BaseWeaponDamage\": 2\n\t\t\t},\n\t\t\t\"CargoContainer\": {\n\t\t\t\t\"CurrentCapacity\": 50,\n\t\t\t\t\"MaximumCapacity\":100\n\t\t\t},\n\t\t\t\"PowerContainer\": {\n\t\t\t\t\"CurrentCapacity\": 5,\n\t\t\t\t\"MaximumCapacity\":100\n\t\t\t}\n\t\t},\n\t\t\"LocationModel\": {\n\t\t\t\"Level\": 1,\n            \"Name\": \"Test Location\",\n            \"IsMineable\": false,\n            \"CanTrade\": false,\n\t\t\t\"LocationSize\": 10,\n\t\t\t\"CurrentPosition\": 9,\n\t\t\t\"AvailableResources\": 10,\n            \"HostileHitpoints\": 20,\n            \"HostileDamage\": 3,\n            \"LocationStatus\": 1,\n            \"VendorModel\": null\n\t\t},\n        \"Version\": \"1.0.0.0\"\n\t}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://spaceadventuregameapi.herokuapp.com/api/game/ExecuteGameTurn?Authorization=",
+					"protocol": "https",
+					"host": [
+						"spaceadventuregameapi",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"game",
+						"ExecuteGameTurn"
+					],
+					"query": [
+						{
+							"key": "Authorization",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Mining Cloud",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "2020/06/22",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"TurnAction\": 1,\n\t\"GameModel\": {\n\t\t\"ShipModel\": {\n\t\t\t\"CurrentHitpoints\": 30,\n\t\t\t\"MaximumHitpoints\": 100,\n\t\t\t\"Engines\": {\n\t\t\t\t\"PowerLevel\": 1,\n\t\t\t\t\"MinPowerUsage\": 2,\n\t\t\t\t\"BaseSpeed\": 2\n\t\t\t},\n\t\t\t\"Shields\": {\n\t\t\t\t\"PowerLevel\": 2,\n\t\t        \"CurrentHitpoints\": 50,\n\t\t        \"MaximumHitpoints\": 50,\n\t\t        \"Hitpoints\": 100,\n\t\t        \"RegenAmount\": 2,\n\t\t        \"MinPowerUsage\": 4\n\t\t\t},\n\t\t\t\"Weapon\": {\n\t\t\t\t\"PowerLevel\": 1,\n\t\t\t\t\"MinPowerUsage\": 2,\n\t\t\t\t\"BaseWeaponDamage\": 1\n\t\t\t},\n\t\t\t\"CargoContainer\": {\n\t\t\t\t\"CurrentCapacity\": 50,\n\t\t\t\t\"MaximumCapacity\":100\n\t\t\t},\n\t\t\t\"PowerContainer\": {\n\t\t\t\t\"CurrentCapacity\": 50,\n\t\t\t\t\"MaximumCapacity\":100\n\t\t\t}\n\t\t},\n\t\t\"LocationModel\": {\n\t\t\t\"Level\": 1,\n            \"Name\": \"Test Location\",\n            \"IsMineable\": false,\n            \"CanTrade\": false,\n\t\t\t\"LocationSize\": 10,\n\t\t\t\"CurrentPosition\": 9,\n\t\t\t\"AvailableResources\": 10,\n            \"HostileHitpoints\": 0,\n            \"HostileDamage\": 0,\n            \"LocationStatus\": 0,\n            \"VendorModel\": null\n\t\t}\n\t}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://spaceadventurelinux.australiaeast.cloudapp.azure.com:6004/api/game/ExecuteGameTurn",
+					"protocol": "http",
+					"host": [
+						"spaceadventurelinux",
+						"australiaeast",
+						"cloudapp",
+						"azure",
+						"com"
+					],
+					"port": "6004",
+					"path": [
+						"api",
+						"game",
+						"ExecuteGameTurn"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetNewRandomLocation Cloud",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "2021/02/07",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"PreviousLocationStatus\": 0\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://spaceadventuregameapi.herokuapp.com/api/game/GetNewRandomLocation",
+					"protocol": "https",
+					"host": [
+						"spaceadventuregameapi",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"game",
+						"GetNewRandomLocation"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Trade",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"TurnAction\": 3,\n\t\"GameModel\": {\n\t\t\"ShipModel\": {\n\t\t\t\"CurrentHitpoints\": 30,\n\t\t\t\"MaximumHitpoints\": 100,\n\t\t\t\"Engines\": {\n\t\t\t\t\"PowerLevel\": 1,\n\t\t\t\t\"MinPowerUsage\": 2,\n\t\t\t\t\"BaseSpeed\": 2\n\t\t\t},\n\t\t\t\"Shields\": {\n\t\t\t\t\"PowerLevel\": 1,\n\t\t        \"CurrentHitpoints\": 50,\n\t\t        \"MaximumHitpoints\": 100,\n\t\t        \"RegenAmount\": 2,\n\t\t        \"MinPowerUsage\": 4\n\t\t\t},\n\t\t\t\"Weapon\": {\n\t\t\t\t\"PowerLevel\": 0,\n\t\t\t\t\"MinPowerUsage\": 2,\n\t\t\t\t\"BaseWeaponDamage\": 2\n\t\t\t},\n\t\t\t\"CargoContainer\": {\n\t\t\t\t\"CurrentCapacity\": 50,\n\t\t\t\t\"MaximumCapacity\":100\n\t\t\t},\n\t\t\t\"PowerContainer\": {\n\t\t\t\t\"CurrentCapacity\": 50,\n\t\t\t\t\"MaximumCapacity\":100\n\t\t\t}\n\t\t},\n\t\t\"LocationModel\": {\n\t\t\t\"Level\": 1,\n            \"Name\": \"Test Location\",\n            \"IsMineable\": false,\n            \"CanTrade\": false,\n\t\t\t\"LocationSize\": 10,\n\t\t\t\"CurrentPosition\": 9,\n\t\t\t\"AvailableResources\": 10,\n            \"HostileHitpoints\": 20,\n            \"HostileDamage\": 3,\n            \"LocationStatus\": 1,\n            \"VendorModel\": {\n            \t\"ResourcesToTrade\": 35,\n                \"ResourcesTradeRate\": 10,\n                \"PowerToTrade\": 30,\n                \"PowerRechargeRate\": 10\n            }\n\t\t}\n\t}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:49722/api/game/ExecuteGameTurn",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "49722",
+					"path": [
+						"api",
+						"game",
+						"ExecuteGameTurn"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
