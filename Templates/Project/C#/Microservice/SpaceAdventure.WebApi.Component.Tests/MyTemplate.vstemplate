@@ -1,0 +1,29 @@
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
+  <TemplateData>
+    <Name>SpaceAdventure.WebApi.Component.Tests</Name>
+    <Description>Component Tests for WebApi</Description>
+    <ProjectType>CSharp</ProjectType>
+    <ProjectSubType>
+    </ProjectSubType>
+    <SortOrder>1000</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>SpaceAdventure.WebApi.Component.Tests</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <CreateInPlace>true</CreateInPlace>
+    <Icon>__TemplateIcon.ico</Icon>
+  </TemplateData>
+  <TemplateContent>
+    <Project TargetFileName="$safeprojectname$.Component.Tests.csproj" File="SpaceAdventure.GameWebApi.Component.Tests.csproj" ReplaceParameters="true">
+      <Folder Name="Apis" TargetFolderName="Apis">
+        <ProjectItem ReplaceParameters="true" TargetFileName="WebApiTests.cs">WebApiTests.cs</ProjectItem>
+      </Folder>
+      <Folder Name="Fixtures" TargetFolderName="Fixtures">
+        <ProjectItem ReplaceParameters="true" TargetFileName="WebApiFixture.cs">WebApiFixture.cs</ProjectItem>
+      </Folder>
+      <Folder Name="Stubs" TargetFolderName="Stubs" />
+      <ProjectItem ReplaceParameters="true" TargetFileName="Usings.cs">Usings.cs</ProjectItem>
+    </Project>
+  </TemplateContent>
+</VSTemplate>

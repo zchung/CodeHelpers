@@ -1,0 +1,32 @@
+<VSTemplate Version="2.0.0" Type="ProjectGroup"
+    xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+	<TemplateData>
+		<Name>Space Adventure Template v5</Name>
+		<Description>This is a multi-project template for the Space Adventure Game.</Description>
+		<ProjectType>CSharp</ProjectType>
+	</TemplateData>
+	<TemplateContent>
+    <ProjectCollection>
+		<SolutionFolder Name="Apis">
+			<ProjectTemplateLink ProjectName="$safeprojectname$" CopyParameters="true">
+				SpaceAdventure.WebApi\MyTemplate.vstemplate
+			</ProjectTemplateLink>
+		</SolutionFolder>	
+		<SolutionFolder Name="Application">
+			<ProjectTemplateLink ProjectName="$safeprojectname$.Domain" CopyParameters="true">
+				SpaceAdventure.WebApi.Domain\MyTemplate.vstemplate
+			</ProjectTemplateLink>
+			<ProjectTemplateLink ProjectName="$safeprojectname$.Application" CopyParameters="true">
+				SpaceAdventure.WebApi.Application\MyTemplate.vstemplate
+			</ProjectTemplateLink>
+		</SolutionFolder>
+		<SolutionFolder Name="Tests">
+			<SolutionFolder Name="Apis">
+				<ProjectTemplateLink ProjectName="$safeprojectname$.Component.Tests" CopyParameters="true">
+					SpaceAdventure.WebApi.Component.Tests\MyTemplate.vstemplate
+				</ProjectTemplateLink>
+			</SolutionFolder>
+		</SolutionFolder>
+    </ProjectCollection>
+</TemplateContent>
+</VSTemplate>
