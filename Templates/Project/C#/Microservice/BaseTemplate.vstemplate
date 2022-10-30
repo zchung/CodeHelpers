@@ -1,7 +1,7 @@
 <VSTemplate Version="2.0.0" Type="ProjectGroup"
     xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
 	<TemplateData>
-		<Name>Space Adventure Template v5</Name>
+		<Name>Space Adventure Template v6</Name>
 		<Description>This is a multi-project template for the Space Adventure Game.</Description>
 		<ProjectType>CSharp</ProjectType>
 	</TemplateData>
