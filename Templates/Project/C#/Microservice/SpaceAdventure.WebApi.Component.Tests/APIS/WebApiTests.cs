@@ -15,10 +15,10 @@ namespace $safeprojectname$.Apis
         }
 
         [TestMethod]
-        public async Task TestMethod()
+        public async Task Version_Should_Return_Success()
         {
             var client = _webApiFixture.Server.CreateClient();
-            var result = await client.GetAsync("api/test");
+            var result = await client.GetAsync("api/version");
             result.IsSuccessStatusCode.Should().Be(true);
         }
     }

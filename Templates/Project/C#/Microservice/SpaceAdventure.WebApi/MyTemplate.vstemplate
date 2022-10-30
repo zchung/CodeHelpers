@@ -21,7 +21,7 @@
       </Folder>
       <Folder Name=".vs" TargetFolderName=".vs" />
       <Folder Name="Controllers" TargetFolderName="Controllers">
-        <ProjectItem ReplaceParameters="true" TargetFileName="TestController.cs">TestController.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="VersionController.cs">VersionController.cs</ProjectItem>
       </Folder>
       <Folder Name="Extensions" TargetFolderName="Extensions">
         <ProjectItem ReplaceParameters="true" TargetFileName="ExceptionStartupExtensions.cs">ExceptionStartupExtensions.cs</ProjectItem>
