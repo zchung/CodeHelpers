@@ -1,0 +1,32 @@
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
+  <TemplateData>
+    <Name>SpaceAdventure.WebApi.External</Name>
+    <Description>Class Library for External Api Request/Responses from other services.</Description>
+    <ProjectType>CSharp</ProjectType>
+    <ProjectSubType>
+    </ProjectSubType>
+    <SortOrder>1000</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>SpaceAdventure.WebApi.External v1</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <CreateInPlace>true</CreateInPlace>
+    <Icon>__TemplateIcon.ico</Icon>
+  </TemplateData>
+  <TemplateContent>
+    <Project TargetFileName="$safeprojectname$.csproj" File="SpaceAdventure.VendorWebApi.External.csproj" ReplaceParameters="true">
+      <Folder Name="Constants" TargetFolderName="Constants">
+        <ProjectItem ReplaceParameters="true" TargetFileName="ApiNameConstants.cs">ApiNameConstants.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="UrlConstants.cs">UrlConstants.cs</ProjectItem>
+      </Folder>
+      <Folder Name="Extensions" TargetFolderName="Extensions">
+        <ProjectItem ReplaceParameters="true" TargetFileName="Extensions.cs">Extensions.cs</ProjectItem>
+      </Folder>
+      <Folder Name="Handlers" TargetFolderName="Handlers">
+        <ProjectItem ReplaceParameters="true" TargetFileName="ApiCallRequestHandler.cs">ApiCallRequestHandler.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="BaseHttpHandler.cs">BaseHttpHandler.cs</ProjectItem>
+      </Folder>
+    </Project>
+  </TemplateContent>
+</VSTemplate>
